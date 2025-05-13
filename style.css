@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.sub-heading{
+    text-align:center;
+    color:var(--green);
+    font-size:2rem;
+    padding-top: 1rem;
+}
+.heading{
+    text-align:center;
+    color:var(--black);
+    font-size:3rem;
+    padding-bottom:2rem;
+    text-transform:uppercase;
+
+}
+
+.btn{
+    margin-top:1rem;
+    display:inline-block;
+    font-size:1.7rem;
+    color:#fff;
+    background:var(--black);
+    border-radius:.5rem;
+    cursor:pointer;
+    padding:.8rem 3rem;
+}
+.btn:hover{
+    background:var(--green);
+    letter-spacing:1rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: var(--green);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    color: var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+    display: none;
+}
+
+#search-form{
+    position:fixed;
+    top:-110%; left:0;
+    height:100%;width:100%;
+    z-index:1004;
+    background:rgba(0,0,0,.8);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding:0 1rem;
+}
+#search-form.active{
+    top:0;
+}
+
+#search-form #search-box{
+    width:50rem;
+    border-bottom:.1rem solid #fff;
+    padding:1rem 0;
+    color:#fff;
+    font-size:3rem;
+    text-transform:none;
+    background:none;
+
+}
+#search-form #search-box::placeholder{
+    color:#eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance:none;
+}
+#search-form label{
+    color:#fff;
+    cursor:pointer;
+    font-size:3rem;
+}
+#search-form label:hover{
+    color:var(--green);
+}
+#search-form #close{
+    position:absolute;
+    color:#fff;
+    cursor:pointer;
+    top:2rem; right :3rem;
+    font-size:5rem;
+}
+/* Add padding so content doesn't hide under navbar */
+.home {
+    padding-top: 8rem; /* increase to 9rem or 10rem if still hidden */
+  }
+  
+  /* Optional: Style the Swiper */
+  .home-slider {
+    width: 100%;
+    height: auto;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+  }
+  
+.slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem; /* You can increase this for more gap */
+    flex-wrap: wrap;
+    margin: 2rem 0; /* adds vertical spacing between slides */
+  }
+  
+  .slide .content {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 2rem; /* space between text and image */
+  }
+  
+  .slide .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem; /* extra gap on left side of image */
+  }
+  
+  .slide .image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  span {
+    color: green;
+    font-size: 2rem; /* You can change the size as needed */
+    font-weight: bold; /* Optional: makes text bolder */
+  }
+
+  .home h3 {
+    font-size: 3rem;
+    color: green;
+  }
+  
+  p {
+    color:var(--light-color);
+    font-size:2.2rem; 
+    padding:5rem;
+    line-height:1.5;
+  }
+
+  .dishes {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .sub-heading {
+    font-size: 2rem;
+    color: #27ae60;
+    margin-bottom: 1rem;
+  }
+  
+  .heading {
+    font-size: 3rem;
+    color: #192a56;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2rem;
+  }
+  
+  .box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .box img {
+   
+    height: 100px;;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .box h3 {
+    font-size: 2.5rem;
+    color: (--black);
+    margin: 1rem 0;
+  }
+  
+  .box .stars i {
+    font-size:1.7rem;
+    padding:1rem 0;
+    color: var(--green);
+  }
+  
+  .box span {
+    font-size: 2.5rem;
+    color: var(--green);
+    display: block;
+    margin: 1rem 0;
+    font-weight:bolder;
+  }
+  
+  .box .btn {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+  
+  .box .fa-heart,
+  .box .fa-eye {
+    position: absolute;
+    top: 1.5rem;
+    background: #eee;
+    padding: 0.6rem;
+    border-radius: 50%;
+    color: #192a56;
+    font-size: 1.6rem;
+    transition: 0.3s;
+  }
+  
+  .box .fa-heart {
+    right: 4.5rem;
+  }
+  
+  .box .fa-eye {
+    left: 1.5rem;
+  }
+  
+  .box .fa-heart:hover,
+  .box .fa-eye:hover {
+    background: #27ae60;
+    color: white;
+  }
+  
+  .review .slide{
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;
+  }
+
+  .review .slide .fa-quote-right{
+    position: absolute;
+    top:2rem; right:2rem;
+    font-size: 6rem;
+    color: #ccc;
+  }
+
+  .review .slide .user{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+  }
+
+  .review .slide .user img{
+    height: 7rem;
+    width:7rem;
+    border-radius: 50%;
+    object-fit:cover;
+  }
+
+  .review .slide .user h3{
+    color:var(--black);
+    font-size:2rem;
+    padding-bottom: .5rem;
+  }
+  .review .slide .usee i{
+    font-size: 1.3rem;
+    color:var(--green);
+  }
+
+  .review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:var(--light-color)
+  }
+  
+
+  .order {
+    padding: 5rem 9%;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .order .sub-heading {
+    font-size: 2rem;
+    color: #27ae60;
+    margin-bottom: 1rem;
+  }
+  
+  .order .heading {
+    font-size: 3rem;
+    color: #192a56;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .order form {
+    max-width: 900px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .order form .inputbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .order form .inputbox .input {
+    flex: 1 1 40rem;
+  }
+  
+  .order form .textarea-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .order form .textarea-row .input {
+    flex: 1 1 40rem;
+  }
+  
+  .order form .input span,
+  .order form .textarea-row .input span {
+    display: block;
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: .5rem;
+  }
+  
+  .order form .input input,
+  .order form .textarea-row .input textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    background: #fff;
+    resize: none;
+  }
+  
+  .order form .btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #27ae60;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .order form .btn:hover {
+    background: #219150;
+  }
+
+
+  @media (max-width: 768px) {
+    .order form .textarea-row {
+      flex-direction: column;
+    }
+  }
+  
+
+  .footer {
+    background: #192a56;
+    color: #eee;
+    padding: 4rem 9%;
+    text-align: left;
+  }
+  
+  .footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer .box {
+    padding: 0.5rem 0;
+  }
+  
+  .footer .box h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    border-left: 5px solid #27ae60;
+    padding-left: 1rem;
+  }
+  
+  .footer .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: #ccc;
+    margin: 0.7rem 0;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .footer .box a i {
+    color: #27ae60;
+    margin-right: 0.8rem;
+  }
+  
+  .footer .box a:hover {
+    color: #27ae60;
+    transform: translateX(5px);
+  }
+  
+  .footer .box p {
+    font-size: 1.4rem;
+    color: #ddd;
+    line-height: 1.6;
+  }
+  
+  .footer .credit {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #aaa;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+  }
+  
+  .footer .credit span {
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+
+  loader-container{
+    position: fixed;
+    top:0; left:0;
+    height: 100%;
+    width:100%;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .loader-container img{
+    width:35rem;
+  }
+
+  .loader-container.fade-out{
+    top:110%;
+    opacity:0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* 🔁 Responsive for tablets and mobiles */
+  @media (max-width: 991px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .box-container .box img{
+    height: auto;
+    width:100%;
+  }
+  
+  .about {
+    padding: 5rem 9%;
+    background: #fff;
+  }
+  
+  .about .sub-heading {
+    font-size: 2rem;
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .about .heading {
+    font-size: 3rem;
+    color: #192a56;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .about .image {
+    flex: 1 1 45rem;
+    text-align: center;
+  }
+  
+  .about .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%; /* round image */
+    object-fit: cover;
+    box-shadow: 0 .5rem 1.2rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .about .content {
+    flex: 1 1 45rem;
+  }
+  
+  .about .content h3 {
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    padding:5rem 0;
+  }
+  
+  .about .content p {
+    font-size: 4rem;
+    color:var(--light-color);
+    margin: 1rem 0;
+    line-height: 2;
+    padding:5rem 0;
+  }
+  
+  .about .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: .5rem;
+    padding:1rem 0;
+  }
+  
+  .about .icons {
+    background:#eee;
+    border-radius:.5rem;
+    border:1rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+    flex:1 1 17rem;
+    padding:1.5rem 1rem;
+  }
+  
+  .about .icons i {
+    font-size: 2.5rem;
+    color: var(--green);
+  }
+  .about .icon .span {
+    font-size:1.5rem;
+    color:var(--green);
+
+  }
+  
+  .about .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #27ae60;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    transition: 0.3s;
+  }
+  
+  .about .btn:hover {
+    background: #219150;
+  }
+
+  @media (max-width: 768px) {
+    .about .row {
+      flex-direction: column;
+    }
+  
+    .about .image img {
+      border-radius: 1rem;
+    }
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 991px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  .menu {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .menu .sub-heading {
+    font-size: 2rem;
+    color: #27ae60;
+    margin-bottom: 1rem;
+  }
+  
+  .menu .heading {
+    font-size: 3rem;
+    color: #192a56;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .menu .box {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    position: relative;
+  }
+  
+  .menu .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu .box .image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .menu .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+  
+  .menu .box .image .fa-heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #eee;
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: #192a56;
+    font-size: 1.6rem;
+    transition: 0.3s;
+  }
+  
+  .menu .box .image .fa-heart:hover {
+    background: #27ae60;
+    color: white;
+  }
+  
+  .menu .box .content {
+    padding: 2rem;
+    text-align: left;
+  }
+  
+  .menu .box .content .stars {
+    color: #ff9529;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+  
+  .menu .box:hover .content .stars {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  
+  .menu .box .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 0.5rem 0;
+  }
+  
+  .menu .box .content p {
+    font-size: 1.7rem;
+    color:var(--light-color);
+   padding:5rem 0;
+   line-height:1.5;
+  }
+  
+  .menu .box .content .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: #27ae60;
+    color: #fff;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    transition: 0.3s;
+  }
+  
+  .menu .box .content .btn:hover {
+    background: #219150;
+  }
+  
+  .menu .box .content .price {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-left:1rem;
+  }
+
+  @media (max-width: 991px) {
+    .menu .box-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .menu .box-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .icons #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path .3s ease-out;
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+        border-radius: .5rem;
+    }
+    #search-form #search-box{
+        width:90%;
+        margin: 0 1rem;
+    }
+}
+
